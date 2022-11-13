@@ -4,9 +4,9 @@
 
     <item
         android:id="@+id/home"
-        android:contentDescription="Home"
+        android:contentDescription="Restaurant"
         android:enabled="true"
-        android:title="Home"
+        android:title="Restaurant"
         android:icon="@drawable/ic_baseline_home_24"/>
     <item
         android:id="@+id/street_food"

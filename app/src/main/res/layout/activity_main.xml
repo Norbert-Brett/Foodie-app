@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
 
@@ -14,9 +15,11 @@
         android:id="@+id/idGVcourses"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:horizontalSpacing="6dp"
-        android:numColumns="2"
-        android:verticalSpacing="6dp" >
+        android:horizontalSpacing="5dp"
+        android:numColumns="1"
+        android:background="#ABB8B3B3"
+
+        android:verticalSpacing="40dp" >
 
 
     </GridView>

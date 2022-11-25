@@ -1,4 +1,4 @@
-package com.example.assigment_1foodieapp;
+package com.example.foodie_app;
 
 public class ReviewActivity {
 }

@@ -18,7 +18,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.foodie_app.Model.User;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -189,7 +189,5 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                         }
                     }
                 });
-
-
     }
     }

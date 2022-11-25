@@ -52,7 +52,8 @@ public class SignIn extends AppCompatActivity {
                         .addOnCompleteListener(this, task -> {
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
-                                Intent intent = new Intent(SignIn.this, MainActivity.class);
+                                Intent intent = new Intent(SignIn.this, RecyclerActivity.class);
+                                intent.putExtra("Restaurant", "Restaurant");
                                 startActivity(intent);
                                 finish();
                             } else {

@@ -1,21 +1,21 @@
-package com.example.assigment_1foodieapp;
+package com.example.foodie_app;
 
-import static com.example.assigment_1foodieapp.R.drawable.service_1;
-import static com.example.assigment_1foodieapp.R.drawable.service_10;
-import static com.example.assigment_1foodieapp.R.drawable.service_2;
-import static com.example.assigment_1foodieapp.R.drawable.service_3;
-import static com.example.assigment_1foodieapp.R.drawable.service_4;
-import static com.example.assigment_1foodieapp.R.drawable.service_5;
-import static com.example.assigment_1foodieapp.R.drawable.service_6;
-import static com.example.assigment_1foodieapp.R.drawable.service_7;
-import static com.example.assigment_1foodieapp.R.drawable.service_8;
-import static com.example.assigment_1foodieapp.R.drawable.service_9;
+import static com.example.foodie_app.R.drawable.service_1;
+import static com.example.foodie_app.R.drawable.service_10;
+import static com.example.foodie_app.R.drawable.service_2;
+import static com.example.foodie_app.R.drawable.service_3;
+import static com.example.foodie_app.R.drawable.service_4;
+import static com.example.foodie_app.R.drawable.service_5;
+import static com.example.foodie_app.R.drawable.service_6;
+import static com.example.foodie_app.R.drawable.service_7;
+import static com.example.foodie_app.R.drawable.service_8;
+import static com.example.foodie_app.R.drawable.service_9;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
 
 import java.util.ArrayList;
 

@@ -1,5 +1,6 @@
-package com.example.assigment_1foodieapp;
+package com.example.foodie_app;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -12,7 +13,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-
 
 import java.util.ArrayList;
 
@@ -31,6 +31,7 @@ public class Feature_Recycleview extends RecyclerView.Adapter<Feature_Recyclevie
 
     }
 
+    @SuppressLint("ResourceType")
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -42,7 +43,7 @@ public class Feature_Recycleview extends RecyclerView.Adapter<Feature_Recyclevie
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         holder.imageView.setImageResource(arrayList.get(position).getImg());
         holder.textView1.setText(arrayList.get(position).getT1());

@@ -1,4 +1,4 @@
-package com.example.foodie_app.Model;
+package com.example.foodie_app;
 
 public class User {
     private String firstName;

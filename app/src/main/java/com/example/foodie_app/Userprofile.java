@@ -1,5 +1,6 @@
-package com.example.assigment_1foodieapp;
+package com.example.foodie_app;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -8,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Userprofile extends AppCompatActivity {
     private Button logout;
 
+    @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,6 +17,6 @@ public class Userprofile extends AppCompatActivity {
 
 
 
-        logout = findViewById(R.id.tlog)
+        logout = findViewById(R.id.tlog);
     }
 };

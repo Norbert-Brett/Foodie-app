@@ -1,8 +1,8 @@
-package com.example.assigment_1foodieapp;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.foodie_app;
 
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class CalendarActivity extends AppCompatActivity {
 

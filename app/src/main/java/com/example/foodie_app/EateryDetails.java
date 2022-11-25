@@ -2,6 +2,7 @@ package com.example.foodie_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,6 +37,7 @@ public class EateryDetails extends AppCompatActivity {
     DatabaseReference dbref;
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,8 +55,8 @@ public class EateryDetails extends AppCompatActivity {
         rb.setIsIndicator(true);
         rb_set_rating = findViewById(R.id.rb_set_rating);
 
+        //Fetching data from clicked object on recycle view
         Intent i = getIntent();
-
         String name = i.getStringExtra("name");
         String desc = i.getStringExtra("desc");
         String loc = i.getStringExtra("loc");
@@ -67,7 +69,7 @@ public class EateryDetails extends AppCompatActivity {
         _timesRated = timesRated;
         _rating = rating;
 
-
+        //Assigning values to views
         tv_name_details.setText(name);
         tv_desc.setText(desc);
         tv_address_details.setText(loc);
@@ -75,24 +77,19 @@ public class EateryDetails extends AppCompatActivity {
         tv_desc.setText(desc);
         float average = _rating/_timesRated;
         rb.setRating(average);
-
-
-
-        //tv_userid.setText(userid);
-
-        if(veg == true){
+        if(veg){
             tv_veg.setText("Yes");
         } else{
             tv_veg.setText("No");
         }
 
-        if(nonveg == true){
+        if(nonveg){
             tv_nonveg.setText("Yes");
         } else{
             tv_nonveg.setText("No");
         }
 
-
+        //Book button starts calendar activity
         btn_book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -100,20 +97,17 @@ public class EateryDetails extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        //button to add reviews, not working yet
         btn_add_reviews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
-
 
                 Intent intent = new Intent(EateryDetails.this, AddReview.class);
                 intent.putExtra("name", name);
                 startActivity(intent);
             }
         });
-
+        //setting rating for Eatery
         rb_set_rating.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

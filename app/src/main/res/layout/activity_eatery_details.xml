@@ -31,7 +31,7 @@
         android:id="@+id/tv_name_details"
         android:layout_width="273dp"
         android:layout_height="45dp"
-        android:text="Name"
+        android:text="@string/name"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="@+id/iv_details"
@@ -43,7 +43,7 @@
         android:id="@+id/tv_desc"
         android:layout_width="411dp"
         android:layout_height="160dp"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +53,7 @@
         android:id="@+id/tv_veg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintEnd_toStartOf="@+id/tv_nonveg"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="97dp"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -74,7 +74,7 @@
         android:layout_height="65dp"
         android:layout_marginTop="124dp"
         android:layout_marginEnd="40dp"
-        android:text="Book"
+        android:text="@string/book"
         app:layout_constraintEnd_toStartOf="@+id/btn_add_reviews"
         app:layout_constraintTop_toBottomOf="@+id/tv_address_details" />
 
@@ -83,7 +83,7 @@
         android:layout_width="100dp"
         android:layout_height="65dp"
         android:layout_marginEnd="16dp"
-        android:text="Add revirew"
+        android:text="@string/add_review"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btn_book" />
 
@@ -92,7 +92,7 @@
         android:layout_width="100dp"
         android:layout_height="65dp"
         android:layout_marginTop="124dp"
-        android:text="View Reviews"
+        android:text="@string/view_reviews"
         app:layout_constraintEnd_toStartOf="@+id/btn_book"
         app:layout_constraintHorizontal_bias="0.036"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +103,7 @@
         android:layout_width="404dp"
         android:layout_height="42dp"
         android:layout_marginTop="20dp"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="93dp"
         android:layout_marginTop="12dp"
-        android:text="Vegeterian"
+        android:text="@string/vegetarian"
         app:layout_constraintEnd_toStartOf="@+id/textView10"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -127,7 +127,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="76dp"
-        android:text="Non-Vegeterian"
+        android:text="@string/non_vegetarian"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_address_details" />
 

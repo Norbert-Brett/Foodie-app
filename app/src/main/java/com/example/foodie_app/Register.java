@@ -81,17 +81,12 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
 
 
 
-    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.banner:
-                startActivity(new Intent(this, SignIn.class));
-                break;
-
-            case R.id.btnRegister:
-                registerUser();
-                break;
+        if (v.getId() == R.id.banner) {
+            startActivity(new Intent(this, SignIn.class));
+        } else if (v.getId() == R.id.btnRegister) {
+            registerUser();
         }
     }
 
@@ -165,7 +160,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                         if(task.isSuccessful()){
                             User user = new User(fName,lName,email,password,role);
 
-                            FirebaseDatabase.getInstance().getReference("Users")
+                            FirebaseDatabase.getInstance().getReference("users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
@@ -174,9 +169,12 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                                             if(task.isSuccessful()){
                                                 Toast.makeText(Register.this, "User has been registered successfully", Toast.LENGTH_LONG).show();
                                                 progressBar.setVisibility(View.GONE);
+                                                startActivity(new Intent(Register.this, SignIn.class));
+                                                finish();
                                             }
                                             else{
-                                                Toast.makeText(Register.this, "Failed to register! Try again!", Toast.LENGTH_LONG).show();
+                                                String error = task.getException() != null ? task.getException().getMessage() : "Unknown error";
+                                                Toast.makeText(Register.this, "Failed to register! " + error, Toast.LENGTH_LONG).show();
                                                 progressBar.setVisibility(View.GONE);
                                             }
                                         }
@@ -184,7 +182,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
 
                         }
                         else{
-                            Toast.makeText(Register.this, "Failed to register! Try again!", Toast.LENGTH_LONG).show();
+                            String error = task.getException() != null ? task.getException().getMessage() : "Unknown error";
+                            Toast.makeText(Register.this, "Failed to register! " + error, Toast.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);
                         }
                     }

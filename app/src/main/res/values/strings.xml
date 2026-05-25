@@ -37,6 +37,15 @@
     <string name="add_name">Add name</string>
     <string name="add_description">Add description</string>
     <string name="add_address">Add Address</string>
+    <string name="change_password">Change Password</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="user_full_name">Daddy Yankee</string>
+    <string name="user_first_name">Daddy</string>
+    <string name="user_last_name">Yankee</string>
+    <string name="user_email">d.yankee@aol.com</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="logout">Logout</string>
+    <string name="back">Back</string>
 
     <string-array name="roles">
         <item>User</item>

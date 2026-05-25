@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.foodie_app'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.foodie_app"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -45,4 +45,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
     implementation "com.airbnb.android:lottie:5.2.0"
+    implementation 'com.mikhaellopez:circularimageview:4.3.1'
 }

@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -101,16 +102,23 @@ public class EateryDetails extends AppCompatActivity {
         btn_add_reviews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent = new Intent(EateryDetails.this, AddReview.class);
-                intent.putExtra("name", name);
-                startActivity(intent);
+                if (FirebaseAuth.getInstance().getCurrentUser() == null) {
+                    startActivity(new Intent(EateryDetails.this, SignIn.class));
+                } else {
+                    Intent intent = new Intent(EateryDetails.this, AddReview.class);
+                    intent.putExtra("name", name);
+                    startActivity(intent);
+                }
             }
         });
         //setting rating for Eatery
         rb_set_rating.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (FirebaseAuth.getInstance().getCurrentUser() == null) {
+                    startActivity(new Intent(EateryDetails.this, SignIn.class));
+                    return;
+                }
                 rb_set_rating.setIsIndicator(true);
                 float rait = rb_set_rating.getRating();
 

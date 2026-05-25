@@ -8,7 +8,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+
+import android.widget.Toast;
+
 import com.example.foodie_app.Adapters.EateryAdaptor;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -73,7 +80,7 @@ public class RecyclerActivity extends AppCompatActivity implements EateryAdaptor
 
         @Override
         public void onCancelled(@NonNull @NotNull DatabaseError error) {
-
+            Toast.makeText(RecyclerActivity.this, "Database Error: " + error.getMessage(), Toast.LENGTH_LONG).show();
         }
     };
 
@@ -92,4 +99,23 @@ public class RecyclerActivity extends AppCompatActivity implements EateryAdaptor
         startActivity(intent);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.add) {
+            if (FirebaseAuth.getInstance().getCurrentUser() == null) {
+                startActivity(new Intent(RecyclerActivity.this, SignIn.class));
+            } else {
+                startActivity(new Intent(RecyclerActivity.this, AddEatery.class));
+            }
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
